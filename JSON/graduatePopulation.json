@@ -1,247 +1,177 @@
 [
   {
-    "statecode": "1",
-    "state": "State - JAMMU & KASHMIR",
-    "Graduatepop": 653764,
-    "gradM": 401279,
-    "gradF": 252485
+    "AreaName": "State - JAMMU & KASHMIR",
+    "Graduate_Male": 401279,
+    "Graduate_Female": 252485
   },
   {
-    "statecode": "2",
-    "state": "State - HIMACHAL PRADESH",
-    "Graduatepop": 446609,
-    "gradM": 251164,
-    "gradF": 195445
+    "AreaName": "State - HIMACHAL PRADESH",
+    "Graduate_Male": 251164,
+    "Graduate_Female": 195445
   },
   {
-    "statecode": "3",
-    "state": "State - PUNJAB",
-    "Graduatepop": 1760846,
-    "gradM": 873776,
-    "gradF": 887070
+    "AreaName": "State - PUNJAB",
+    "Graduate_Male": 873776,
+    "Graduate_Female": 887070
   },
   {
-    "statecode": "4",
-    "state": "State - CHANDIGARH",
-    "Graduatepop": 194453,
-    "gradM": 104748,
-    "gradF": 89705
+    "AreaName": "State - CHANDIGARH",
+    "Graduate_Male": 104748,
+    "Graduate_Female": 89705
   },
   {
-    "statecode": "5",
-    "state": "State - UTTARAKHAND",
-    "Graduatepop": 910288,
-    "gradM": 512068,
-    "gradF": 398220
+    "AreaName": "State - UTTARAKHAND",
+    "Graduate_Male": 512068,
+    "Graduate_Female": 398220
   },
   {
-    "statecode": "6",
-    "state": "State - HARYANA",
-    "Graduatepop": 1877085,
-    "gradM": 1102809,
-    "gradF": 774276
+    "AreaName": "State - HARYANA",
+    "Graduate_Male": 1102809,
+    "Graduate_Female": 774276
   },
   {
-    "statecode": "7",
-    "state": "State - NCT OF DELHI",
-    "Graduatepop": 2757844,
-    "gradM": 1535972,
-    "gradF": 1221872
+    "AreaName": "State - NCT OF DELHI",
+    "Graduate_Male": 1535972,
+    "Graduate_Female": 1221872
   },
   {
-    "statecode": "8",
-    "state": "State - RAJASTHAN",
-    "Graduatepop": 3063282,
-    "gradM": 2086247,
-    "gradF": 977035
+    "AreaName": "State - RAJASTHAN",
+    "Graduate_Male": 2086247,
+    "Graduate_Female": 977035
   },
   {
-    "statecode": "9",
-    "state": "State - UTTAR PRADESH",
-    "Graduatepop": 9919838,
-    "gradM": 6378138,
-    "gradF": 3541700
+    "AreaName": "State - UTTAR PRADESH",
+    "Graduate_Male": 6378138,
+    "Graduate_Female": 3541700
   },
   {
-    "statecode": "10",
-    "state": "State - BIHAR",
-    "Graduatepop": 3061676,
-    "gradM": 2326092,
-    "gradF": 735584
+    "AreaName": "State - BIHAR",
+    "Graduate_Male": 2326092,
+    "Graduate_Female": 735584
   },
   {
-    "statecode": "11",
-    "state": "State - SIKKIM",
-    "Graduatepop": 32669,
-    "gradM": 19290,
-    "gradF": 13379
+    "AreaName": "State - SIKKIM",
+    "Graduate_Male": 19290,
+    "Graduate_Female": 13379
   },
   {
-    "statecode": "12",
-    "state": "State - ARUNACHAL PRADESH",
-    "Graduatepop": 53606,
-    "gradM": 36430,
-    "gradF": 17176
+    "AreaName": "State - ARUNACHAL PRADESH",
+    "Graduate_Male": 36430,
+    "Graduate_Female": 17176
   },
   {
-    "statecode": "13",
-    "state": "State - NAGALAND",
-    "Graduatepop": 89718,
-    "gradM": 53023,
-    "gradF": 36695
+    "AreaName": "State - NAGALAND",
+    "Graduate_Male": 53023,
+    "Graduate_Female": 36695
   },
   {
-    "statecode": "14",
-    "state": "State - MANIPUR",
-    "Graduatepop": 225620,
-    "gradM": 135082,
-    "gradF": 90538
+    "AreaName": "State - MANIPUR",
+    "Graduate_Male": 135082,
+    "Graduate_Female": 90538
   },
   {
-    "statecode": "15",
-    "state": "State - MIZORAM",
-    "Graduatepop": 49621,
-    "gradM": 29527,
-    "gradF": 20094
+    "AreaName": "State - MIZORAM",
+    "Graduate_Male": 29527,
+    "Graduate_Female": 20094
   },
   {
-    "statecode": "16",
-    "state": "State - TRIPURA",
-    "Graduatepop": 137812,
-    "gradM": 88621,
-    "gradF": 49191
+    "AreaName": "State - TRIPURA",
+    "Graduate_Male": 88621,
+    "Graduate_Female": 49191
   },
   {
-    "statecode": "17",
-    "state": "State - MEGHALAYA",
-    "Graduatepop": 90519,
-    "gradM": 46311,
-    "gradF": 44208
+    "AreaName": "State - MEGHALAYA",
+    "Graduate_Male": 46311,
+    "Graduate_Female": 44208
   },
   {
-    "statecode": "18",
-    "state": "State - ASSAM",
-    "Graduatepop": 1011345,
-    "gradM": 639241,
-    "gradF": 372104
+    "AreaName": "State - ASSAM",
+    "Graduate_Male": 639241,
+    "Graduate_Female": 372104
   },
   {
-    "statecode": "19",
-    "state": "State - WEST BENGAL",
-    "Graduatepop": 4827817,
-    "gradM": 3088673,
-    "gradF": 1739144
+    "AreaName": "State - WEST BENGAL",
+    "Graduate_Male": 3088673,
+    "Graduate_Female": 1739144
   },
   {
-    "statecode": "20",
-    "state": "State - JHARKHAND",
-    "Graduatepop": 1328477,
-    "gradM": 906174,
-    "gradF": 422303
+    "AreaName": "State - JHARKHAND",
+    "Graduate_Male": 906174,
+    "Graduate_Female": 422303
   },
   {
-    "statecode": "21",
-    "state": "State - ODISHA",
-    "Graduatepop": 1783797,
-    "gradM": 1174184,
-    "gradF": 609613
+    "AreaName": "State - ODISHA",
+    "Graduate_Male": 1174184,
+    "Graduate_Female": 609613
   },
   {
-    "statecode": "22",
-    "state": "State - CHHATTISGARH",
-    "Graduatepop": 1018853,
-    "gradM": 659081,
-    "gradF": 359772
+    "AreaName": "State - CHHATTISGARH",
+    "Graduate_Male": 659081,
+    "Graduate_Female": 359772
   },
   {
-    "statecode": "23",
-    "state": "State - MADHYA PRADESH",
-    "Graduatepop": 3222802,
-    "gradM": 2051127,
-    "gradF": 1171675
+    "AreaName": "State - MADHYA PRADESH",
+    "Graduate_Male": 2051127,
+    "Graduate_Female": 1171675
   },
   {
-    "statecode": "24",
-    "state": "State - GUJARAT",
-    "Graduatepop": 3174158,
-    "gradM": 1891932,
-    "gradF": 1282226
+    "AreaName": "State - GUJARAT",
+    "Graduate_Male": 1891932,
+    "Graduate_Female": 1282226
   },
   {
-    "statecode": "25",
-    "state": "State - DAMAN & DIU",
-    "Graduatepop": 12802,
-    "gradM": 8425,
-    "gradF": 4377
+    "AreaName": "State - DAMAN & DIU",
+    "Graduate_Male": 8425,
+    "Graduate_Female": 4377
   },
   {
-    "statecode": "26",
-    "state": "State - DADRA & NAGAR HAVELI",
-    "Graduatepop": 19174,
-    "gradM": 12227,
-    "gradF": 6947
+    "AreaName": "State - DADRA & NAGAR HAVELI",
+    "Graduate_Male": 12227,
+    "Graduate_Female": 6947
   },
   {
-    "statecode": "27",
-    "state": "State - MAHARASHTRA",
-    "Graduatepop": 8639081,
-    "gradM": 5167671,
-    "gradF": 3471410
+    "AreaName": "State - MAHARASHTRA",
+    "Graduate_Male": 5167671,
+    "Graduate_Female": 3471410
   },
   {
-    "statecode": "28",
-    "state": "State - ANDHRA PRADESH",
-    "Graduatepop": 5577387,
-    "gradM": 3632622,
-    "gradF": 1944765
+    "AreaName": "State - ANDHRA PRADESH",
+    "Graduate_Male": 3632622,
+    "Graduate_Female": 1944765
   },
   {
-    "statecode": "29",
-    "state": "State - KARNATAKA",
-    "Graduatepop": 4043647,
-    "gradM": 2489209,
-    "gradF": 1554438
+    "AreaName": "State - KARNATAKA",
+    "Graduate_Male": 2489209,
+    "Graduate_Female": 1554438
   },
   {
-    "statecode": "30",
-    "state": "State - GOA",
-    "Graduatepop": 146828,
-    "gradM": 74077,
-    "gradF": 72751
+    "AreaName": "State - GOA",
+    "Graduate_Male": 74077,
+    "Graduate_Female": 72751
   },
   {
-    "statecode": "31",
-    "state": "State - LAKSHADWEEP",
-    "Graduatepop": 2302,
-    "gradM": 1458,
-    "gradF": 844
+    "AreaName": "State - LAKSHADWEEP",
+    "Graduate_Male": 1458,
+    "Graduate_Female": 844
   },
   {
-    "statecode": "32",
-    "state": "State - KERALA",
-    "Graduatepop": 2531321,
-    "gradM": 1131336,
-    "gradF": 1399985
+    "AreaName": "State - KERALA",
+    "Graduate_Male": 1131336,
+    "Graduate_Female": 1399985
   },
   {
-    "statecode": "33",
-    "state": "State - TAMIL NADU",
-    "Graduatepop": 5457742,
-    "gradM": 3119342,
-    "gradF": 2338400
+    "AreaName": "State - TAMIL NADU",
+    "Graduate_Male": 3119342,
+    "Graduate_Female": 2338400
   },
   {
-    "statecode": "34",
-    "state": "State - PUDUCHERRY",
-    "Graduatepop": 142029,
-    "gradM": 79482,
-    "gradF": 62547
+    "AreaName": "State - PUDUCHERRY",
+    "Graduate_Male": 79482,
+    "Graduate_Female": 62547
   },
   {
-    "statecode": "35",
-    "state": "State - ANDAMAN & NICOBAR ISLANDS",
-    "Graduatepop": 24159,
-    "gradM": 13622,
-    "gradF": 10537
+    "AreaName": "State - ANDAMAN & NICOBAR ISLANDS",
+    "Graduate_Male": 13622,
+    "Graduate_Female": 10537
   }
 ]

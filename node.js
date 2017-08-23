@@ -8,7 +8,7 @@ var lineReader = require('readline').createInterface({
 });
 var myWriteStreamAge = require("fs").createWriteStream("JSON/ageWise.json")
 var myWriteStreamgender = require("fs").createWriteStream("JSON/graduatePopulation.json")
-var myWriteStream = require("fs").createWriteStream("JSON/educationCategory.json")
+var myWriteStreameducation = require("fs").createWriteStream("JSON/educationCategory.json")
 lineReader.on('line',
     function(line) {
         var jsonFromLine = {};
@@ -56,75 +56,58 @@ lineReader.on('close', function(line) {
     myWriteStreamAge.write(JSON.stringify(final, null, 2))
 });
 
-var final_three = [];
-var s = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+//For Second Statewise and gender wise Graduate Population
 
+lineReader.on('line', function(line) {
+    var jsonFromLine2 = {};
+    var lineSplit = line.split(',');
+    if (lineSplit[4] === "Total") {
+        if (lineSplit[5] === "All ages") {
+            jsonFromLine2.state = lineSplit[3];
+            jsonFromLine2.Graduatepop = parseInt(lineSplit[39]);
+            jsonFromLine2.gradM = parseInt(lineSplit[40]);
+            jsonFromLine2.gradF = parseInt(lineSplit[41]);
+            result1.push(jsonFromLine2);
+        }
+    }
+})
+lineReader.on('close', function() {
+    var i = 0;
+    while (i != 35) {
+        var array = {
+            AreaName: result1[i].state,
+            Graduate_Male: result1[i].gradM,
+            Graduate_Female: result1[i].gradF
+        }
+        statearray.push(array);
+        i++;
+    }
+    myWriteStreamgender.write(JSON.stringify(statearray, null, 2))
+});
+
+
+var a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 lineReader.on('line', function(line) {
     var jsonFromLine_three = {};
     var lineSplit_three = line.split(',')
-
     if (lineSplit_three[4] == 'Total' && lineSplit_three[5] == 'All ages') {
-        for (let i = 0, j = 15; i < 10; i++, j += 3)
-
-        {
-            s[i] = s[i] + parseInt(lineSplit_three[j])
+        for (let i = 0, j = 15; i < 10; i++, j += 3) {
+            a[i] = a[i] + parseInt(lineSplit_three[j])
         }
     }
 });
-
-lineReader.on('close', function() {
-    obj = {
-        literate: s[0],
-        belowprimary: s[1],
-        primary: s[2],
-        middle: s[3],
-        secondary: s[4],
-        higher_secondary: s[5],
-        non_diploma: s[6],
-        tech_diploma: s[7],
-        graduate: s[8],
-        unclassified: s[9]
-    }
-    final_three.push(obj)
-    myWriteStream.write(JSON.stringify(final_three, null, 2))
-})
-//For Second Statewise and gender wise Graduate Population
-lineReader.on('line',
-    function(line) {
-        var jsonFromLine2 = {};
-        var lineSplit = line.split(',');
-        var statearray = [];
-        if (lineSplit[4] === "Total") {
-            if (lineSplit[5] === "All ages") {
-                var x = lineSplit[1]
-                if (x == '01' || x == '02' || x == '03' || x == '04' || x == '05' || x == '06' || x == '07' || x == '08' || x == '09')
-                    x = x.charAt(1)
-                jsonFromLine2.statecode = x
-                jsonFromLine2.state = lineSplit[3];
-                jsonFromLine2.Graduatepop = parseInt(lineSplit[39]);
-                jsonFromLine2.gradM = parseInt(lineSplit[40]);
-                jsonFromLine2.gradF = parseInt(lineSplit[41]);
-                result1.push(jsonFromLine2);
-            }
-        }
-    });
+var arr = ['Literate_without_educational_level_persons', 'Below_Primary_persons', 'Below_Primary_persons', 'Middle_persons', 'Matric_Secondary_persons', 'Higher_secondary_Senior_secondary_persons',
+    'Non_technical_diploma_degree_persons', ' Technical_diploma_persons', 'Graduate_above_persons', 'Unclassified_persons'
+]
 lineReader.on('close',
     function() {
-        var i = 1;
+        obj = []
+        for (var i = 0; i < 10; i++) {
+            obj[i] = {
+                name: arr[i],
+                value: a[i]
+            }
 
-        while (i != 36) {
-
-            jsonResult1 = result1.filter(function(agegp) {
-
-                return agegp['statecode'] === i.toString();
-            });
-
-
-            var array = {};
-            array = jsonResult1[0];
-            statearray.push(array);
-
-            i++;
         }
-        myWriteStreamgender.write(JSON.stringify(statearray, null, 2))
-    });
+        myWriteStreameducation.write(JSON.stringify(obj, null, 2))
+    })
