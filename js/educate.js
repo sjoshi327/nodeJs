@@ -1,75 +1,4 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-body {
-    font: 10px sans-serif;
-    margin-left: 10%;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-}
-
-.bar {
-    fill: lightblue;
-}
-
-.bar:hover {
-    fill: green;
-}
-
-.x.axis path {
-    display: none;
-
-}
-
-.d3-tip {
-    line-height: 1;
-    font-weight: bold;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    border-radius: 2px;
-}
-
-
-/* Creates a small triangle extender for the tooltip */
-
-.d3-tip:after {
-    box-sizing: border-box;
-    display: inline;
-    font-size: 10px;
-    width: 100%;
-    line-height: 1;
-    color: rgba(0, 0, 0, 0.8);
-    content: "\25BC";
-    position: absolute;
-    text-align: center;
-}
-
-
-/* Style northward tooltips differently */
-
-.d3-tip.n:after {
-    margin: -1px 0 0 0;
-    top: 100%;
-    left: 0;
-}
-body h1{
-    margin-left: 45%;
-}
-
-</style>
-
-<body>
-    <h1>Education Category Wise</h1>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-    <script>
-    var margin = { top: 40, right: 0, bottom: 250, left: 65 },
+var margin = { top: 40, right: 0, bottom: 250, left: 65 },
         width = 1300 - margin.left ,/*/- margin.right/*/ 
         height = 700 - margin.top - margin.bottom;
     var formatPercent = d3.format("");
@@ -96,7 +25,7 @@ body h1{
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     svg.call(tip);
-    d3.json("JSON/educationCategory.json", function(error, data) {
+    d3.json("../json/educationCategory.json", function(error, data) {
         x.domain(data.map(function(d) { return d.name; }));
         y.domain([0, d3.max(data, function(d) { return d.value; })]);
             svg.append("g")
@@ -123,11 +52,3 @@ body h1{
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
     });
-    </script>
-    </body>
-    
-
-
-
-
-

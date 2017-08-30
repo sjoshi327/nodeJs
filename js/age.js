@@ -1,80 +1,9 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-body {
-    font: 10px sans-serif;
-    margin-left: 10%;
-}
-
-body h1{
-    margin-left: 15%;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-}
-
-.bar {
-    fill: steelblue;
-}
-
-.bar:hover {
-    fill: orange;
-}
-
-.x.axis path {
-    display: none;
-
-}
-
-.d3-tip {
-    line-height: 1;
-    font-weight: bold;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    border-radius: 2px;
-}
-
-/* Creates a small triangle extender for the tooltip */
-
-.d3-tip:after {
-    box-sizing: border-box;
-    display: inline;
-    font-size: 10px;
-    width: 100%;
-    line-height: 1;
-    color: rgba(0, 0, 0, 0.8);
-    content: "\25BC";
-    position: absolute;
-    text-align: center;
-}
-
-
-/* Style northward tooltips differently */
-
-.d3-tip.n:after {
-    margin: -1px 0 0 0;
-    top: 100%;
-    left: 0;
-}
-
-</style>
-
-<body>
-    <h1>Age-Wise Literate Population</h1>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-    <script>
-    var margin = { top: 40, right: 0, bottom: 100, left: 55 },
+var margin = { top: 40, right: 0, bottom: 100, left: 55 },
         width = 1300 - margin.left ,
         height = 700 - margin.top - margin.bottom;
     var formatPercent = d3.format("");
     var x = d3.scale.ordinal()
-        .rangeRoundBands([0, width], .2);
+        .rangeRoundBands([0, width], .4);
     var y = d3.scale.linear()
         .range([height, 0]);
     var xAxis = d3.svg.axis()
@@ -96,13 +25,13 @@ body h1{
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     svg.call(tip);
-    d3.json("JSON/ageWise.json", function(error, data) {
+    d3.json("../json/ageWise.json", function(error, data) {
         x.domain(data.map(function(d) { return d.AgeGroup; }));
         y.domain([0, d3.max(data, function(d) { return d.totalliterate; })]);
         svg.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
+            .call(xAxis)
         svg.append("g")
             .attr("class", "y axis")
             .call(yAxis)
@@ -111,7 +40,7 @@ body h1{
             .attr("y", 6)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .text("litterate");
+            .text("literate");
         svg.selectAll(".bar")
             .data(data)
             .enter().append("rect")
@@ -123,6 +52,3 @@ body h1{
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
     });
-    </script>
-    </body>
-    

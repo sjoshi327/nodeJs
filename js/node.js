@@ -4,11 +4,14 @@ var statearray = [];
 var final = [];
 var fs = require("fs");
 var lineReader = require('readline').createInterface({
-    input: require('fs').createReadStream('India2011.csv')
+    input: require('fs').createReadStream('../csv/india2011.csv')
 });
-var myWriteStreamAge = require("fs").createWriteStream("JSON/ageWise.json")
-var myWriteStreamgender = require("fs").createWriteStream("JSON/graduatePopulation.json")
-var myWriteStreameducation = require("fs").createWriteStream("JSON/educationCategory.json")
+var myWriteStreamAge = require("fs").createWriteStream("../json/ageWise.json")
+var myWriteStreamgender = require("fs").createWriteStream("../json/graduatePopulation.json")
+var myWriteStreameducation = require("fs").createWriteStream("../json/educationCategory.json")
+
+//For first Agewise population
+
 lineReader.on('line',
     function(line) {
         var jsonFromLine = {};
@@ -58,6 +61,7 @@ lineReader.on('close', function(line) {
 
 //For Second Statewise and gender wise Graduate Population
 
+
 lineReader.on('line', function(line) {
     var jsonFromLine2 = {};
     var lineSplit = line.split(',');
@@ -85,7 +89,7 @@ lineReader.on('close', function() {
     myWriteStreamgender.write(JSON.stringify(statearray, null, 2))
 });
 
-
+//For Third Graduate population 
 var a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 lineReader.on('line', function(line) {
     var jsonFromLine_three = {};

@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-.axis text {
-    font: 10px sans-serif;
-}
-
-.axis line,
-.axis path {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-}
-
-.axis--x path {
-    display: none;
-}
-
-.path-line {
-    fill: none;
-    stroke: yellow;
-    stroke-width: 1.5px;
-}
-
-svg {
-    background: #f0f0f0;
-}
-</style>
-
-<body>
-    <h2>State Wise and Gender Wise Graduate Population</h2>
-    <div id='stacked-bar'></div>
-    <script src="//d3js.org/d3.v4.min.js"></script>
-    <script>
-    var initStackedBarChart = {
+ var initStackedBarChart = {
         draw: function(config) {
             me = this,
                 domEle = config.element,
@@ -87,7 +53,7 @@ svg {
         }
     }
     var key = ["Graduate_Male", "Graduate_Female"];
-    var data1 = d3.json("JSON/graduatePopulation.json", function(error, jsonData) {
+    var data1 = d3.json("../json/graduatePopulation.json", function(error, jsonData) {
         if (error) throw error;
         data1 = jsonData;
         initStackedBarChart.draw({
@@ -96,7 +62,3 @@ svg {
             element: 'stacked-bar'
         });
     });
-    </script>
-    <p><button disabled style="background-color: steelblue">  &nbsp; </button> &nbsp; Male</p>
-   <p><button disabled style="background-color: lightblue">  &nbsp; </button> &nbsp; Female</p>
-   </body>
